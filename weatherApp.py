@@ -9,7 +9,7 @@ ancho = 550
 largo = 250
 appName = "WeatherApp"
 url = "http://api.weatherapi.com/v1/current.json"
-apiKey = "2c1d6cf9fa914ed49bb204115211807"
+apiKey = ""
 
 
 # Tipo propio
@@ -60,11 +60,20 @@ def configureWindow():
     app.title(appName)
 
 
+def readApiKey():
+    global apiKey
+
+    file = open("apiKey.txt")
+    file.readline()
+    apiKey = file.readline()
+
+
 def start():
     app.mainloop()
 
 
 app = tkinter.Tk()
+readApiKey()
 configureWindow()
 
 # Configurando la ventana
