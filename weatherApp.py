@@ -1,6 +1,5 @@
 import tkinter
 from tkinter import Label, messagebox
-
 import requests
 
 # Constantes
@@ -42,8 +41,8 @@ def checkweahterapi(city):
             "aqi": "no"
         }
         consulta = requests.get(url, params=params)
-        print(consulta.json())
-        print("\n-----------------------------------\n")
+        # print(consulta.json())
+        # print("\n-----------------------------------\n")
         if consulta.ok:
             tiempo = Tiempo(consulta.json()["location"]["name"], consulta.json()["current"]["temp_c"], consulta.json()[
                             "location"]["region"], consulta.json()["current"]["uv"], consulta.json()["location"]["localtime"], consulta.json()["location"]["country"])
