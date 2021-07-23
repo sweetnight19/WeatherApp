@@ -21,16 +21,16 @@ class Tiempo:
         self.__pais = str(pais)
 
     def showresults(self):
-        mostarClima.configure(text=self.temperatura+"°C")
+        mostarClima.configure(text=self.__temperatura+"°C")
         nombreCorrectoClima.configure(
-            text="Ciudad: "+self.nombreCiudad)
+            text="Ciudad: "+self.__nombreCiudad)
         regionCorrectoClima.configure(
-            text="Region: "+self.region)
+            text="Region: "+self.__region)
         UVCorrectoClima.configure(
-            text="UV: "+self.uv)
+            text="UV: "+self.__uv)
         horarioCorrectoClima.configure(
-            text="Horario local: "+self.horario)
-        paisCorrectoClima.configure(text="Pais: "+self.pais)
+            text="Horario local: "+self.__horario)
+        paisCorrectoClima.configure(text="Pais: "+self.__pais)
 
 
 def checkweahterapi(city):
