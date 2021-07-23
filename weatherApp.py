@@ -13,12 +13,12 @@ apiKey = ""
 # Tipo propio
 class Tiempo:
     def __init__(self, nombreciudad, temperatura, region, uv, horario, pais):
-        self.nombreCiudad = nombreciudad
-        self.temperatura = str(temperatura)
-        self.region = str(region)
-        self.uv = str(uv)
-        self.horario = str(horario)
-        self.pais = str(pais)
+        self.__nombreCiudad = nombreciudad
+        self.__temperatura = str(temperatura)
+        self.__region = str(region)
+        self.__uv = str(uv)
+        self.__horario = str(horario)
+        self.__pais = str(pais)
 
     def showresults(self):
         mostarClima.configure(text=self.temperatura+"°C")
